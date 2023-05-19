@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<Title>Cargo Bike Steering</Title>
+<style>
+    body{ background-color: lightgrey; }
+    canvas{border:0px solid red;}
+</style>
+
+</head>
+
+<body onload="load()">
+
+<table style="width:800; margin: 0 auto; border:0px solid #000000; text-align:center;">
+<tr>
+<td>
+<div class="slidecontainer">
+	<label for="susT">Steering Range: </label>
+	<label id="susTreadout"></label>
+	<input type="range" class="slider" id="susT" name="susT" oninput="reload()" max="15" min="-15" step=".1" value = "0">
+</div>
+<input type="button" name="Reset" ID="resetBtn" value ="Reset" onclick="resetSteer()">
+a:<input type="text" name="cValue" ID="cValue">
+b:<input type="text" name="cValue2" ID="cValue2">
+c:<input type="text" name="cValue3" ID="cValue3">
+<input type="text" name="cValue4" ID="cValue4">
+</td>
+</tr>
+<tr style="width:800">
+<td style="width:800">
+<canvas id="myCanvas" width="800px" height="800px"></canvas><br>
+</td>
+</tr>
+</table>
+
+<script src="cargoBikeSteering.js" type="text/javascript"></script>
+
+</body>
+</html>
